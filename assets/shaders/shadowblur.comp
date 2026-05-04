@@ -1,0 +1,50 @@
+#if defined(HORIZONTAL)
+    layout (local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
+#else 
+    layout (local_size_x = 1, local_size_y = 128, local_size_z = 1) in;
+#endif
+
+layout (std430, binding = 0) readonly buffer blurKernel {
+    float weights[11];
+};
+
+uniform int blurWidth = 10;
+
+
+layout (rgba32f) uniform readonly image2D src;
+layout (rgba32f) uniform writeonly image2D dst;
+
+shared vec4 v[128+101];
+
+void main() {
+
+    // 1. Setup direction and positions
+    #if defined(HORIZONTAL)
+        const ivec2 dir = ivec2(1, 0);
+        uint lpos = gl_LocalInvocationID.x;
+    #else
+        const ivec2 dir = ivec2(0, 1);
+        uint lpos = gl_LocalInvocationID.y;
+    #endif
+
+    ivec2 imgSize = imageSize(src);
+    ivec2 gpos = ivec2(gl_GlobalInvocationID.xy); // Global location in the compute execution - gl_WorkGroupID * gl_WorkGroupSize + gl_LocalInvocationID    
+    int w = blurWidth / 2;
+    
+    v[lpos] = imageLoad(src, clamp(gpos - (dir * w), ivec2(0), imgSize - 1));
+    
+    if(lpos < blurWidth) {    
+        v[lpos + 128] = imageLoad(src, clamp(gpos + (dir * (128 - w)), ivec2(0), imgSize - 1));
+    }
+
+    memoryBarrierShared();
+    barrier();
+
+    if (gpos.x < imgSize.x && gpos.y < imgSize.y) {
+        vec4 blurSum = vec4(0.0);
+        for (int i = 0; i <= 2*w; i++) {    
+              blurSum += v[lpos + i] * weights[i];        
+        }    
+        imageStore(dst, gpos, blurSum);
+    }
+}

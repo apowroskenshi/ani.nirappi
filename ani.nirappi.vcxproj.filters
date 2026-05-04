@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <!-- Source Filters -->
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{f382c5ba-1ee1-489e-b617-c77aafd4f352}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Renderer">
+      <UniqueIdentifier>{a1b2c3d4-1111-4aaa-b111-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geometry">
+      <UniqueIdentifier>{a1b2c3d4-1111-4aaa-b111-000000000003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lighting">
+      <UniqueIdentifier>{a1b2c3d4-1111-4aaa-b111-000000000002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Camera">
+      <UniqueIdentifier>{a1b2c3d4-1111-4aaa-b111-000000000004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Material">
+      <UniqueIdentifier>{a1b2c3d4-1111-4aaa-b111-000000000005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\External">
+      <UniqueIdentifier>{fd45b822-2869-4bfa-8c36-6496375ec7c7}</UniqueIdentifier>
+    </Filter>
+
+    <!-- Header Filters -->
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{29181034-4c4b-4f49-914d-323e81dbf62d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Renderer">
+      <UniqueIdentifier>{a1b2c3d4-2222-4bbb-b222-000000000002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Geometry">
+      <UniqueIdentifier>{a1b2c3d4-2222-4bbb-b222-000000000004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lighting">
+      <UniqueIdentifier>{a1b2c3d4-2222-4bbb-b222-000000000003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Camera">
+      <UniqueIdentifier>{a1b2c3d4-2222-4bbb-b222-000000000005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Material">
+      <UniqueIdentifier>{a1b2c3d4-2222-4bbb-b222-000000000006}</UniqueIdentifier>
+    </Filter>
+
+    <!-- Shader Filters -->
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{a1b2c3d4-3333-4ccc-b333-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Geometry">
+      <UniqueIdentifier>{a1b2c3d4-3333-4ccc-b333-000000000002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Lighting">
+      <UniqueIdentifier>{a1b2c3d4-3333-4ccc-b333-000000000003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Shadows">
+      <UniqueIdentifier>{a1b2c3d4-3333-4ccc-b333-000000000004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Post-Process">
+      <UniqueIdentifier>{a1b2c3d4-3333-4ccc-b333-000000000005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Forward">
+      <UniqueIdentifier>{a1b2c3d4-3333-4ccc-b333-000000000006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Environment">
+      <UniqueIdentifier>{a1b2c3d4-3333-4ccc-b333-000000000007}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+
+  <!-- Source Files (.cpp / .c) -->
+  <ItemGroup>
+    <!-- Core -->
+    <ClCompile Include="src\core\Main.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <!-- Renderer -->
+    <ClCompile Include="src\renderer\Scene.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\Shader.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\BlurShader.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\FrameBuffer.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\ShadowMapBlur.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <!-- Geometry -->
+    <ClCompile Include="src\geometry\Mesh.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\geometry\Model.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\geometry\ModelLoader.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\geometry\MaterialStrategy.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <!-- Lighting -->
+    <ClCompile Include="src\lighting\Light.cpp">
+      <Filter>Source Files\Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lighting\DirectionalLight.cpp">
+      <Filter>Source Files\Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lighting\SkyDome.cpp">
+      <Filter>Source Files\Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lighting\SHIrradiance.cpp">
+      <Filter>Source Files\Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lighting\HammersleyRandomGenerator.cpp">
+      <Filter>Source Files\Lighting</Filter>
+    </ClCompile>
+    <!-- Camera -->
+    <ClCompile Include="src\camera\Camera.cpp">
+      <Filter>Source Files\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\camera\Input.cpp">
+      <Filter>Source Files\Camera</Filter>
+    </ClCompile>
+    <!-- Material -->
+    <ClCompile Include="src\material\Texture.cpp">
+      <Filter>Source Files\Material</Filter>
+    </ClCompile>
+    <!-- External -->
+    <ClCompile Include="src\external\glad.c">
+      <Filter>Source Files\External</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\stb_image.cpp">
+      <Filter>Source Files\External</Filter>
+    </ClCompile>
+  </ItemGroup>
+
+  <!-- Header Files (.h) -->
+  <ItemGroup>
+    <!-- Core -->
+    <ClInclude Include="include\core\RenderConfig.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\Logger.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <!-- Renderer -->
+    <ClInclude Include="include\renderer\Scene.h">
+      <Filter>Header Files\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renderer\Shader.h">
+      <Filter>Header Files\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renderer\BlurShader.h">
+      <Filter>Header Files\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renderer\FrameBuffer.h">
+      <Filter>Header Files\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renderer\ShadowMapBlur.h">
+      <Filter>Header Files\Renderer</Filter>
+    </ClInclude>
+    <!-- Geometry -->
+    <ClInclude Include="include\geometry\Mesh.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="include\geometry\Model.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="include\geometry\ModelLoader.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="include\geometry\MaterialStrategy.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <!-- Lighting -->
+    <ClInclude Include="include\lighting\Light.h">
+      <Filter>Header Files\Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lighting\DirectionalLight.h">
+      <Filter>Header Files\Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lighting\SkyDome.h">
+      <Filter>Header Files\Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lighting\SHIrradiance.h">
+      <Filter>Header Files\Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lighting\HammersleyRandomGenerator.h">
+      <Filter>Header Files\Lighting</Filter>
+    </ClInclude>
+    <!-- Camera -->
+    <ClInclude Include="include\camera\Camera.h">
+      <Filter>Header Files\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="include\camera\Input.h">
+      <Filter>Header Files\Camera</Filter>
+    </ClInclude>
+    <!-- Material -->
+    <ClInclude Include="include\material\Texture.h">
+      <Filter>Header Files\Material</Filter>
+    </ClInclude>
+  </ItemGroup>
+
+  <!-- Shader Files -->
+  <ItemGroup>
+    <!-- Geometry -->
+    <None Include="assets\shaders\gbuffer.vert">
+      <Filter>Shaders\Geometry</Filter>
+    </None>
+    <None Include="assets\shaders\gbuffer.frag">
+      <Filter>Shaders\Geometry</Filter>
+    </None>
+
+    <!-- Lighting -->
+    <None Include="assets\shaders\deferred_lighting.vert">
+      <Filter>Shaders\Lighting</Filter>
+    </None>
+    <None Include="assets\shaders\deferred_lighting.frag">
+      <Filter>Shaders\Lighting</Filter>
+    </None>
+    <None Include="assets\shaders\deferred_lighting_debug.frag">
+      <Filter>Shaders\Lighting</Filter>
+    </None>
+
+    <!-- Shadows -->
+    <None Include="assets\shaders\shadow.vert">
+      <Filter>Shaders\Shadows</Filter>
+    </None>
+    <None Include="assets\shaders\shadow.frag">
+      <Filter>Shaders\Shadows</Filter>
+    </None>
+    <None Include="assets\shaders\shadowblur.comp">
+      <Filter>Shaders\Shadows</Filter>
+    </None>
+
+    <!-- Post-Process -->
+    <None Include="assets\shaders\postprocess.vert">
+      <Filter>Shaders\Post-Process</Filter>
+    </None>
+    <None Include="assets\shaders\rawssao.frag">
+      <Filter>Shaders\Post-Process</Filter>
+    </None>
+    <None Include="assets\shaders\ssr.frag">
+      <Filter>Shaders\Post-Process</Filter>
+    </None>
+    <None Include="assets\shaders\blurssao.frag">
+      <Filter>Shaders\Post-Process</Filter>
+    </None>
+    <None Include="assets\shaders\rawdirectssdo.frag">
+      <Filter>Shaders\Post-Process</Filter>
+    </None>
+    <None Include="assets\shaders\rawindirectssdo.frag">
+      <Filter>Shaders\Post-Process</Filter>
+    </None>
+    <None Include="assets\shaders\blurssdo.frag">
+      <Filter>Shaders\Post-Process</Filter>
+    </None>
+
+    <!-- Forward -->
+    <None Include="assets\shaders\shader.vert">
+      <Filter>Shaders\Forward</Filter>
+    </None>
+    <None Include="assets\shaders\shader.frag">
+      <Filter>Shaders\Forward</Filter>
+    </None>
+
+    <!-- Environment -->
+    <None Include="assets\shaders\skydome.vert">
+      <Filter>Shaders\Environment</Filter>
+    </None>
+    <None Include="assets\shaders\skydome.frag">
+      <Filter>Shaders\Environment</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,42 @@
+# Build output
+x64/
+Debug/
+Release/
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.lib
+*.exp
+*.iobj
+*.ipdb
+*.log
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.sln.docstates
+
+# vcpkg installed packages
+vcpkg_installed/
+
+# ImGui layout state
+imgui.ini
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Compiled shaders (if any)
+*.spv
+
+# Scene cache files
+*.cache
+
+# Large assets (add via Git LFS later)
+assets/model/
+assets/textures/
